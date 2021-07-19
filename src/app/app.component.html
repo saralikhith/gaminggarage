@@ -1,0 +1,45 @@
+
+
+ <nav class="navbar navbar-expand-md navbar-light bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="game" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT-wAWxD1A3_XNtOCAsS5TIu3a3vBAoop6FQ&usqp=CAU" alt="" width="85rem" ></a>
+    <button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color: white;"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3 ">
+        <li class="nav-item">
+          <a class="nav-link text-dark"  routerLink="store" routerLinkActive="active" *ngIf="!us.loginStatus">Store</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" routerLink="contactus" routerLinkActive="active" *ngIf="!us.loginStatus">Contact us</a>
+        </li>
+      
+        <li class="nav-item ">
+          <a class="nav-link text-dark" routerLink="signup" routerLinkActive="active" *ngIf="!us.loginStatus">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" routerLink="login" routerLinkActive="active" *ngIf="!us.loginStatus">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" routerLink="login" routerLinkActive="active" *ngIf="us.loginStatus" (click)="onLogOut()">LogOut</a>
+        </li>
+      
+      
+      
+      </ul>
+ 
+    </div>
+  </div>
+</nav>
+
+<div >
+  <router-outlet></router-outlet>
+</div>
+
+<!-- footer component -->
+<app-footer class="mt-auto">
+  
+</app-footer>
+
+

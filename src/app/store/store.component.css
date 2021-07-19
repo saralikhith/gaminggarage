@@ -1,0 +1,17 @@
+.active{
+    font-weight:500;
+   color: white;
+}
+.nav-link:hover{
+    color: white;
+}
+
+ a{
+    color: rgb(143, 143, 143);
+}
+
+hr{
+    
+    color: white;
+   margin-top: -2px;
+}

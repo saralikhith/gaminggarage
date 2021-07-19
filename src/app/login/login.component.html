@@ -1,0 +1,30 @@
+   <h2 class=" text-center mt-3 mb-4" style="color: 	#00b159">
+       Login Form
+   </h2>
+    <div class="row mt-3">
+        <div class="col-md-3 col-sm-2">
+
+        </div>
+    <div class="col-md-6 col-sm-8 col-12 ">
+       
+    <form #ref='ngForm' (ngSubmit)="ref.form.valid && onLogin( ref)" >
+        <div class="mb-3">
+        <label for="em" class="form-label text-white">User Name</label>
+        <input type="text" name="username" id="em" class="form-control" placeholder="User Name" ngModel required #ref1="ngModel">
+        <p class="text-warning" *ngIf="((ref.submitted || ref1.touched) && ref1.errors?.required)">*Username is required</p>
+        </div>
+        <div class="mb-3">
+            <label for="pw" class="form-label text-white">password</label>
+            <input type="password" name="password" id="pw" class="form-control" placeholder="Password" required ngModel #ref4="ngModel">
+            <p class="text-warning" *ngIf="((ref.submitted || ref4.touched) && ref4.errors?.required)">* password is required</p>
+            </div>
+            <button type="submit" class="btn btn-warning d-block mx-auto mt-1 mb-5">Login</button>
+    </form>
+       
+    </div>
+    <div class="col-md-3 col-sm-2">
+
+    </div>
+
+</div>
+

@@ -1,0 +1,18 @@
+<h5 class="text-end text-warning mt-2 me-3">welcome ,<span class="text-white">{{userObj.username}}</span> 
+    <span class="ps-1"> <img [src]="userObj.profilePic" alt="" width="60px"></span> 
+    </h5>
+
+    <ul class="nav nav-pills mb-3 d-flex justify-content-evenly">
+        <li class="nav-item">
+            <a class="nav-link text-white"  routerLink="browse" routerLinkActive="active">Browse</a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" routerLink="gamesincart" routerLinkActive="active">Cart <button class="btn-sm btn-warning ms-1"> {{count}}</button></a>
+          </li>
+</ul>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+

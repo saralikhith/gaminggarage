@@ -1,0 +1,45 @@
+  
+p{
+    font-size: x-small;
+    
+    font-weight:normal;
+    color: rgb(184, 184, 184);
+    
+}
+body{
+    background-color: white;
+}
+#pol a{
+     text-decoration:none;
+       padding-bottom: 5px;
+       color: white;
+       font-size:small;
+      
+       margin-right: 20px;
+      
+     
+}
+footer{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfs1K0BMS4JPqwsjOga_BV-Avi0K6mi0eXg&usqp=CAU');
+    
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: 600%;
+}
+ #pol a:hover{
+   color: blue;
+}
+
+#fo a{
+    
+    color: white;
+    font-size:2rem;
+    padding-right: 10px;
+}
+ #fo a:hover{
+         color: blue;
+ }
+ li{
+     list-style-type: none;
+ }
+

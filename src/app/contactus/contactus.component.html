@@ -1,0 +1,27 @@
+<div class="container d-flex">
+    <div class="row">
+       
+        <div class="col-6  p-3" style="background-color:#3b444b;">
+          <h3 class="text-center text-light">Contact Us</h3>
+        <form #ref="ngForm" (ngSubmit)="onClickMessage(ref)">
+      
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="name" placeholder="Your name.." class="form-control" ngModel>
+      
+          <label for="lname">Email</label>
+          <input type="email" id="lname" name="email" placeholder="Your email id.."  class="form-control" ngModel>
+      
+          <label for="subject">Message</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"  class="form-control" ngModel></textarea>
+      
+          <button type="submit" class="ms-auto w-100 pt-2 pb-2">Send Message</button>
+      
+        </form>
+        </div>
+
+        <div class="col-6 text-center getintouch">
+          <h3>Get in Touch</h3>
+          <p style="font-weight: bold;">Want to get in touch ? We'd love to hear from you .Here's how you can reach us...</p>
+        </div>
+    </div>
+</div>

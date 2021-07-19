@@ -1,0 +1,19 @@
+<div class="container-fluid ">
+    <h5 class="text-end text-warning mt-2 me-3">welcome ,<span class="text-white">{{userObj.username}}</span> 
+        <span class="ps-1"> <img [src]="userObj.profilePic" alt="" width="60px" class="mt-1"></span> 
+        </h5>
+<ul class="nav nav-pills mb-2 d-flex justify-content-evenly mt-3">
+    <li class="nav-item">
+        <a class="nav-link text-white" routerLink="addProducts" routerLinkActive="active">AddProducts</a>
+      </li>
+    <li class="nav-item">
+      <a class="nav-link text-white"  routerLink="browse" routerLinkActive="active">Browse</a>
+    </li>
+  
+
+  </ul>
+  
+</div>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

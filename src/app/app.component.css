@@ -1,0 +1,14 @@
+.navbar-brand{
+   
+    position: absolute;
+  margin-bottom: -30px;
+  bottom: 17px;
+  
+
+}
+.navbar-brand{
+   position: relative;
+}
+.active{
+    font-weight: bold;
+}

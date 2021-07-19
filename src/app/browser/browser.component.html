@@ -1,0 +1,38 @@
+
+<div class="gamebox">
+    <input type="text" placeholder="Search by game name" class="form-control" name="gameTitle" [(ngModel)]="searchItem">
+    
+    <div class="row  row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 mt-2"  >
+      <div class="col" *ngFor="let gameObj of  game|search:searchItem  | paginate: { itemsPerPage: 8, currentPage: p }">
+        <div class="card card bg-dark text-white mx-2 h-100"  >
+          <img src="{{gameObj.thumbnail}}" class="card-img-top" height="200px"  alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{gameObj.title}}</h5>
+            <p class="card-text">{{gameObj.short_description}}</p>
+           <a href="{{gameObj.game_url}}"class="btn btn-primary mb-2" >Play</a>
+           <button type="submit" class="btn btn-danger float-end" *ngIf="username=='likhith' || username=='pooja'" (click)="onDelete(gameObj)"><i class="fas fa-trash-alt me-1"></i>Delete</button>
+           <button type="submit" class="btn btn-warning float-end"  *ngIf="username!=='likhith' && username!=='pooja'  && us.loginStatus" (click)="onProductSelection(gameObj)" ><i class="fas fa-cart-plus me-1"></i>AddtoCart</button>
+           
+          </div>
+      </div>
+
+      
+    </div>
+    </div>
+               
+              
+        <!--
+        <div class="card bg-dark text-white mx-2 " *ngFor="let gameObj of games" style="width: 18rem;">
+            <img src="{{gameObj.thumbnail}}"  alt="..." width=100%>
+            <div class="card-body">
+                
+              <h5 class="card-title">{{gameObj.title}}</h5>
+              <p class="card-text">{{gameObj.short_description}}</p>
+              <a href="{{gameObj.game_url}}" class="btn btn-primary">Play</a>
+            </div>
+          </div> -->
+
+<div class="container text-white text-center mt-3" id="pg">
+  <pagination-controls  (pageChange)="p=$event" ></pagination-controls>
+</div>
+ 
