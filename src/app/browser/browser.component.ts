@@ -14,7 +14,7 @@ export class BrowserComponent implements OnInit {
   searchItem:String;
   constructor(private gds:GamesDataService,public us:UserService,private admin:AdminService,private router:Router) { }
 
-  p:number=1
+  p:number=3
   games:any;
   game
   username
